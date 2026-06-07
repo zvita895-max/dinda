@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekskul Badminton SMAN 10 Garut</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Sembunyikan section halaman secara default, tampilkan jika ada class active */
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen justify-between">
+
+    <nav class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('beranda')">
+                <span class="text-2xl">🏸</span>
+                <span class="font-bold text-xl tracking-wide">Badminton SMAN 10 Garut</span>
+            </div>
+            <div class="flex gap-4 text-sm font-medium">
+                <button id="nav-beranda" onclick="showPage('beranda')" class="nav-btn border-b-2 border-white pb-1 focus:outline-none cursor-pointer">Beranda</button>
+                <button id="nav-tentang" onclick="showPage('tentang')" class="nav-btn text-blue-100 hover:text-white transition focus:outline-none cursor-pointer">Tentang</button>
+                <button id="nav-kegiatan" onclick="showPage('kegiatan')" class="nav-btn text-blue-100 hover:text-white transition focus:outline-none cursor-pointer">Kegiatan</button>
+                <button id="nav-prestasi" onclick="showPage('prestasi')" class="nav-btn text-blue-100 hover:text-white transition focus:outline-none cursor-pointer">Prestasi</button>
+                <button id="nav-kontak" onclick="showPage('kontak')" class="nav-btn text-blue-100 hover:text-white transition focus:outline-none cursor-pointer">Kontak</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <section id="page-beranda" class="page-section active">
+            <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Smash Keras, Mental Cerdas!</h1>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8">Wadah pengembangan bakat, sportivitas, dan prestasi bulutangkis siswa-siswi SMAN 10 Garut.</p>
+                    <button onclick="showPage('tentang')" class="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-50 transition cursor-pointer">Jelajahi Lebih Lanjut</button>
+                </div>
+            </header>
+
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Selamat Datang di Website Resmi Kami</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Ekstrakurikuler Badminton SMAN 10 Garut merupakan salah satu wadah olahraga teraktif di sekolah. Kami berkomitmen untuk membentuk atlet muda yang tidak hanya unggul di dalam lapangan, tetapi juga memiliki disiplin dan solidaritas tinggi di luar lapangan.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Melalui program latihan yang terstruktur dan didampingi pelatih berpengalaman, kami siap membantu kamu menyalurkan hobi menjadi prestasi yang membanggakan.
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center justify-center p-4">
+                        <div class="w-64 h-64 bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-500 rounded-full shadow-2xl flex flex-col items-center justify-center text-white border-4 border-white animate-pulse-slow">
+                            <div class="text-6xl mb-2">🏸</div>
+                            <h2 class="font-extrabold text-xl tracking-wider text-center px-4 uppercase drop-shadow-md">BADMINTON</h2>
+                            <p class="text-[11px] tracking-widest text-blue-200 font-bold drop-shadow-xs">SMAN 10 GARUT</p>
+                            <div class="mt-3 w-12 h-1 bg-yellow-400 rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="page-tentang" class="page-section max-w-4xl mx-auto px-4 py-12">
+            <div class="mb-12">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4 border-b-2 border-blue-600 pb-2">Sejarah Singkat</h1>
+                <p class="text-gray-600 leading-relaxed">
+                    Ekstrakurikuler Badminton SMAN 10 Garut didirikan atas dasar tingginya minat dan antusiasme siswa terhadap olahraga bulutangkis. Sejak awal pembentukannya, ekskul ini menjadi wadah berkumpulnya para pencinta bulutangkis, baik yang ingin sekadar mengasah kebugaran tubuh maupun yang berniat serius mengejar prestasi di ajang turnamen antar-pelajar.
+                </p>
+            </div>
+
+            <div class="mb-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h2 class="text-xl font-bold text-blue-900 mb-2">Visi</h2>
+                    <p class="text-blue-800 text-sm leading-relaxed">
+                        Mewujudkan ekstrakurikuler bulutangkis yang adaptif, unggul dalam prestasi, serta melahirkan atlet yang berintegritas, disiplin, dan berjiwa sportivitas tinggi.
+                    </p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                    <h2 class="text-xl font-bold text-indigo-900 mb-2">Misi</h2>
+                    <ul class="text-indigo-800 text-sm list-disc pl-4 space-y-1">
+                        <li>Menyelenggarakan latihan rutin yang terarah dan berkualitas.</li>
+                        <li>Membangun ikatan kekeluargaan yang erat antar anggota.</li>
+                        <li>Mengikuti berbagai kompetisi regional untuk melatih mental bertanding.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-600 pb-2">Struktur Pengurus</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="bg-white p-4 rounded-xl shadow-xs border border-gray-100">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center font-bold text-gray-400">P</div>
+                        <h3 class="font-bold text-sm text-gray-900">fauzan</h3>
+                        <p class="text-xs text-blue-600">Pembina Ekskul</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-xs border border-gray-100">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center font-bold text-gray-400">K</div>
+                        <h3 class="font-bold text-sm text-gray-900">Al Luqman Hidayat</h3>
+                        <p class="text-xs text-blue-600">Ketua Ekskul</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-xs border border-gray-100">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center font-bold text-gray-400">W</div>
+                        <h3 class="font-bold text-sm text-gray-900">Tyo Akbar Pratama</h3>
+                        <p class="text-xs text-blue-600">Wakil Ketua</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-xs border border-gray-100">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center font-bold text-gray-400">B</div>
+                        <h3 class="font-bold text-sm text-gray-900">Tiara Cantikasari</h3>
+                        <p class="text-xs text-blue-600">Bendahara</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-kegiatan" class="page-section max-w-6xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2 border-b-2 border-blue-600 pb-2">Galeri Kegiatan</h1>
+            <p class="text-gray-600 text-sm mb-8">Dokumentasi serta agenda kegiatan utama yang dilaksanakan oleh ekstrakurikuler bulutangkis.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                    <img src="WhatsApp Image 2026-06-07 at 16.38.03.jpeg" alt="Foto Latihan Rutin" class="w-full h-48 object-cover bg-gray-200">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Rutin</span>
+                        <h3 class="font-bold text-lg text-gray-900 mt-2 mb-1">Latihan Mingguan</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">Fokus pada teknik dasar, fisik, taktik bermain, dan sparring antar anggota setiap Selasa & Kamis.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                    <img src="WhatsApp Image 2026-06-07 at 16.37.49.jpeg" alt="Foto Class Meeting" class="w-full h-48 object-cover bg-gray-200">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Tahunan</span>
+                        <h3 class="font-bold text-lg text-gray-900 mt-2 mb-1">Class Meeting & Cup</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">Mengadakan kejuaraan internal antar kelas untuk menjaring bakat-bakat baru yang tersembunyi.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                    <img src="WhatsApp Image 2026-06-07 at 16.38.24.jpeg" alt="Foto Sparring" class="w-full h-48 object-cover bg-gray-200">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded">Agenda</span>
+                        <h3 class="font-bold text-lg text-gray-900 mt-2 mb-1">Sparring Antar Sekolah</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">Uji coba kemampuan bertanding melawan tim ekskul badminton dari sekolah lain di wilayah Garut.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="page-prestasi" class="page-section max-w-4xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2 border-b-2 border-blue-600 pb-2">Papan Prestasi</h1>
+            <p class="text-gray-600 text-sm mb-8">Hasil kerja keras, keringat, dan dedikasi para atlet SMAN 10 Garut di berbagai turnamen resmi.</p>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-bold text-sm border-b border-gray-200">
+                            <th class="p-4">Tahun</th>
+                            <th class="p-4">Kategori Kejuaraan</th>
+                            <th class="p-4 text-center">Pencaparesan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-gray-100 text-gray-700">
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-gray-900">2025</td>
+                            <td class="p-4">O2SN Tingkat Kabupaten Garut (Tunggal Putra)</td>
+                            <td class="p-4 text-center"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-1 rounded text-xs">Juara 1 🥇</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-gray-900">2024</td>
+                            <td class="p-4">Turnamen Bulutangkis Antar-Pelajar se-Priangan Timur (Ganda Campuran)</td>
+                            <td class="p-4 text-center"><span class="bg-slate-200 text-slate-800 font-bold px-2 py-1 rounded text-xs">Juara 2 🥈</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-gray-900">2023</td>
+                            <td class="p-4">Piala Bupati Garut (Ganda Putra)</td>
+                            <td class="p-4 text-center"><span class="bg-orange-100 text-orange-800 font-bold px-2 py-1 rounded text-xs">Juara 3 🥉</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="page-kontak" class="page-section max-w-6xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-blue-600 pb-2">Hubungi Kami</h1>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">Informasi Sekretariat</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Kampus SMAN 10 Garut<br>
+                            Jl. Desa Berkah No. 10, Garut, Jawa Barat
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">Media Sosial & Email</h2>
+                        <p class="text-sm text-gray-600">📩 <span class="font-semibold text-gray-900">Email:</span> badminton.sman10garut@gmail.com</p>
+                        <p class="text-sm text-gray-600">📸 <span class="font-semibold text-gray-900">Instagram:</span> @badminton_sman10garut</p>
+                        <p class="text-sm text-gray-600">💬 <span class="font-semibold text-gray-900">WhatsApp Admin:</span> +62 812-3456-7890</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Kirim Pesan / Minat Gabung</h2>
+                    <form action="#" method="POST" class="space-y-4" onsubmit="alert('Terima kasih! Pesan atau data pendaftaran Anda telah berhasil dikirim ke Admin.'); return false;">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">Nama Lengkap</label>
+                            <input type="text" required class="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">Kelas</label>
+                            <input type="text" placeholder="Contoh: X-A / XI-MIPA 1" required class="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">Isi Pesan / Pertanyaan</label>
+                            <textarea required rows="4" class="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition shadow-md text-sm cursor-pointer">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-gray-800 text-sm">
+        <p>&copy; 2026 Ekskul Badminton SMAN 10 Garut. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const activeSection = document.getElementById('page-' + pageId);
+            if(activeSection) {
+                activeSection.classList.add('active');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.className = "nav-btn text-blue-100 hover:text-white transition focus:outline-none cursor-pointer";
+            });
+
+            const currentBtn = document.getElementById('nav-' + pageId);
+            if(currentBtn) {
+                currentBtn.className = "nav-btn border-b-2 border-white pb-1 focus:outline-none cursor-pointer";
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
